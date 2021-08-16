@@ -1,10 +1,11 @@
 import Button from "./Button";
 import classes from "./ErrorModal.module.css";
 import Card from "../UI/Card";
+import React from "react";
 
 function ErrorModal(props) {
   return (
-    <div>
+    <React.Fragment>
       <div className={classes.backdrop} />
       <Card className={classes.modal}>
         <header className={classes.header}>
@@ -14,10 +15,10 @@ function ErrorModal(props) {
           <p>{props.message}</p>
         </div>
         <footer className={classes.actions}>
-        <Button onClick={props.onConfirm}>Okay</Button>
+          <Button onClick={props.onConfirm}>Okay</Button>
         </footer>
       </Card>
-    </div>
+    </React.Fragment>
   );
 }
 
